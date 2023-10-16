@@ -25,9 +25,11 @@ const taskList = document.getElementById("task-list");
 document.getElementById("add-task").onclick = function () {
     const taskText = taskInput.value;
     if (taskText !== "") {
-        const li = document.createElement("li");
-        li.textContent = taskText;
+        const li = document.createElement("li").appendChild("h4");
+    
+        li.childNodes[0].textContent = taskText;
         taskList.appendChild(li);
         taskInput.value = "";
     }
+
 };
